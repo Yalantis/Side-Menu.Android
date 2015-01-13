@@ -2,7 +2,7 @@ Side Menu
 ==============
 Side menu with some categories to choose. 
 Made in <a href="http://yalantis.com/"> Yalantis</a>.<br>
-Check this <a href="https://dribbble.com/shots/1689922-Side-Menu-Animation?list=searches&tag=yalantis&offset=0">project on dribble</a>.
+Check this <a href="https://dribbble.com/shots/1689922-Side-Menu-Animation?list=searches&tag=yalantis&offset=0">project on dribbble</a>.
 
 God bless Ukraine!
 
