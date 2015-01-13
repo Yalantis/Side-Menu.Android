@@ -1,0 +1,48 @@
+# svn
+*.svn*
+
+# built application files
+*.apk
+*.ap_
+
+# files for the dex VM
+*.dex
+
+# Java class files
+*.class
+
+# generated GUI files
+*/R.java
+
+# generated folder
+bin
+gen
+
+# local
+local.properties
+proguard.cfg
+
+# log files
+log*.txt
+
+# archives
+*.gz
+*.tar
+*.zip
+
+# eclipse
+*.metadata
+*.settings
+
+# idea
+*.idea
+*.iml
+*.ipr
+*.iws
+out/
+
+# gradle
+build/
+.gradle
+
+# linux
