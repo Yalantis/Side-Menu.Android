@@ -2,7 +2,8 @@ Side Menu
 ==============
 Side menu with some categories to choose. 
 Made in <a href="http://yalantis.com/"> Yalantis</a>.<br>
-Check this <a href="https://dribbble.com/shots/1689922-Side-Menu-Animation?list=searches&tag=yalantis&offset=0">project on dribbble</a>.
+Check this <a href="https://dribbble.com/shots/1689922-Side-Menu-Animation?list=searches&tag=yalantis&offset=0">project on dribbble</a>.<br>
+Check this <a href="https://www.behance.net/gallery/20411445/Mobile-Animations-Interactions ">project on Behance</a>.
 
 God bless Ukraine!
 
