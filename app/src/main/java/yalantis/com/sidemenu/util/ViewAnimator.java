@@ -1,6 +1,5 @@
 package yalantis.com.sidemenu.util;
 
-import android.graphics.drawable.BitmapDrawable;
 import android.os.Handler;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
@@ -13,11 +12,8 @@ import android.widget.LinearLayout;
 import java.util.ArrayList;
 import java.util.List;
 
-import io.codetail.animation.SupportAnimator;
-import io.codetail.animation.ViewAnimationUtils;
 import yalantis.com.sidemenu.R;
 import yalantis.com.sidemenu.animation.FlipAnimation;
-import yalantis.com.sidemenu.fragment.ContentFragment;
 import yalantis.com.sidemenu.interfaces.Resourceble;
 import yalantis.com.sidemenu.interfaces.ScreenShotable;
 
@@ -30,30 +26,22 @@ public class ViewAnimator<T extends Resourceble> {
 
     private ActionBarActivity actionBarActivity;
     private List<T> list;
-    private LinearLayout linearLayout;
+
     private List<View> viewList = new ArrayList<>();
     private ScreenShotable screenShotable;
     private DrawerLayout drawerLayout;
-
-    private int res = R.drawable.content_music;
-
+    private ViewAnimatorListener animatorListener;
 
     public ViewAnimator(ActionBarActivity activity,
                         List<T> items,
-                        LinearLayout linearLayout,
                         ScreenShotable screenShotable,
-                        final DrawerLayout drawerLayout) {
+                        final DrawerLayout drawerLayout,
+                        ViewAnimatorListener animatorListener) {
         this.actionBarActivity = activity;
         this.list = items;
-        this.linearLayout = linearLayout;
-        this.linearLayout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                drawerLayout.closeDrawers();
-            }
-        });
         this.screenShotable = screenShotable;
         this.drawerLayout = drawerLayout;
+        this.animatorListener = animatorListener;
     }
 
     public void showMenuContent() {
@@ -75,7 +63,7 @@ public class ViewAnimator<T extends Resourceble> {
             viewMenu.setVisibility(View.GONE);
             viewMenu.setEnabled(false);
             viewList.add(viewMenu);
-            linearLayout.addView(viewMenu);
+            animatorListener.addViewToContainer(viewMenu);
             final double position = i;
             final double delay = 3 * ANIMATION_DURATION * (position / size);
             new Handler().postDelayed(new Runnable() {
@@ -111,7 +99,7 @@ public class ViewAnimator<T extends Resourceble> {
     }
 
     private void setViewsClickable(boolean clickable) {
-        actionBarActivity.getSupportActionBar().setHomeButtonEnabled(false);
+        animatorListener.disableHomeButton();
         for (View view : viewList) {
             view.setEnabled(clickable);
         }
@@ -163,7 +151,7 @@ public class ViewAnimator<T extends Resourceble> {
                 view.clearAnimation();
                 view.setVisibility(View.INVISIBLE);
                 if (position == viewList.size() - 1) {
-                    actionBarActivity.getSupportActionBar().setHomeButtonEnabled(true);
+                    animatorListener.enableHomeButton();
                     drawerLayout.closeDrawers();
                 }
             }
@@ -178,53 +166,19 @@ public class ViewAnimator<T extends Resourceble> {
     }
 
     private void switchItem(Resourceble slideMenuItem, int topPosition) {
-        switch (slideMenuItem.getName()) {
-            case ContentFragment.CLOSE:
-                break;
-            case ContentFragment.BUILDING:
-                replaceFragment(topPosition);
-                break;
-            case ContentFragment.BOOK:
-                replaceFragment(topPosition);
-                break;
-            case ContentFragment.PAINT:
-                replaceFragment(topPosition);
-                break;
-            case ContentFragment.CASE:
-                replaceFragment(topPosition);
-                break;
-            case ContentFragment.SHOP:
-                replaceFragment(topPosition);
-                break;
-            case ContentFragment.PARTY:
-                replaceFragment(topPosition);
-                break;
-            case ContentFragment.MOVIE:
-                replaceFragment(topPosition);
-                break;
-        }
+        this.screenShotable = animatorListener.onSwitch(slideMenuItem, screenShotable, topPosition);
         hideMenuContent();
     }
 
-    private void replaceFragment(int topPosition) {
-        this.res = this.res == R.drawable.content_music ? R.drawable.content_films : R.drawable.content_music;
-        View view = actionBarActivity.findViewById(R.id.content_frame);
-        int finalRadius = Math.max(view.getWidth(), view.getHeight());
-        SupportAnimator animator =
-                ViewAnimationUtils.createCircularReveal(view, 0, topPosition, 0, finalRadius);
-        animator.setInterpolator(new AccelerateInterpolator());
-        animator.setDuration(ViewAnimator.CIRCULAR_REVEAL_ANIMATION_DURATION);
+    public interface ViewAnimatorListener {
 
-        actionBarActivity.findViewById(R.id.content_overlay).setBackgroundDrawable(new BitmapDrawable(actionBarActivity.getResources(), screenShotable.getBitmap()));
-        animator.start();
-        ContentFragment contentFragment = ContentFragment.newInstance(this.res);
-        actionBarActivity.getSupportFragmentManager().beginTransaction()
-                .replace(R.id.content_frame, contentFragment)
-                .commit();
-        this.screenShotable = contentFragment;
-    }
+        public ScreenShotable onSwitch(Resourceble slideMenuItem, ScreenShotable screenShotable, int position);
 
-    public LinearLayout getLinearLayout() {
-        return linearLayout;
+        public void disableHomeButton();
+
+        public void enableHomeButton();
+
+        public void addViewToContainer(View view);
+
     }
 }
