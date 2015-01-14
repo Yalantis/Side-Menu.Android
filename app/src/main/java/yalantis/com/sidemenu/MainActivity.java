@@ -59,7 +59,7 @@ public class MainActivity extends ActionBarActivity implements ViewAnimator.View
 
         setActionBar();
         createMenuList();
-        viewAnimator = new ViewAnimator<>(this, list,  contentFragment, drawerLayout, this);
+        viewAnimator = new ViewAnimator<>(this, list, contentFragment, drawerLayout, this);
     }
 
     private void createMenuList() {
