@@ -19,6 +19,7 @@ depends on <a href="https://github.com/ozodrukh">ozodrukh's</a> animation util f
 
 Using
 ======
+First of all you have to upload animation submodule with `git submodule update --init` command 
 You have to create special overlay layout to show in behind current `Circular Reveal` animated view.
 And to add all items to menu you have to add all of them into  `LinearLayout`
 
