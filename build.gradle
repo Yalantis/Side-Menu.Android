@@ -13,7 +13,10 @@ buildscript {
 }
 
 allprojects {
+    version = VERSION_NAME
+    group = GROUP
     repositories {
         jcenter()
     }
 }
+apply from: 'maven_push.gradle'
