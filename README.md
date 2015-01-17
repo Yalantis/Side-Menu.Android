@@ -15,7 +15,7 @@ Sample
 Note
 ====
 
-depends on <a href="https://github.com/ozodrukh">ozodrukh's</a> animation util for CircularReveal animation for 2.3+ version
+depends on <a href="https://github.com/ozodrukh">Ozodrukh's</a> animation util for CircularReveal animation for 2.3+ version
 
 Using
 ======
@@ -74,7 +74,6 @@ And to add all items to menu you have to add all of them into  `LinearLayout`
         </LinearLayout>
     </ScrollView>
 </android.support.v4.widget.DrawerLayout>
-</io.codetail.widget.RevealFrameLayout>
 ```
 
 ```java
