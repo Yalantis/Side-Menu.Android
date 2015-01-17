@@ -74,7 +74,6 @@ And to add all items to menu you have to add all of them into  `LinearLayout`
         </LinearLayout>
     </ScrollView>
 </android.support.v4.widget.DrawerLayout>
-</io.codetail.widget.RevealFrameLayout>
 ```
 
 ```java
