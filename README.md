@@ -15,7 +15,7 @@ Sample
 Note
 ====
 
-depends on <a href="https://github.com/ozodrukh">ozodrukh's</a> animation util for CircularReveal animation for 2.3+ version
+depends on <a href="https://github.com/ozodrukh">Ozodrukh's</a> animation util for CircularReveal animation for 2.3+ version
 
 Using
 ======
