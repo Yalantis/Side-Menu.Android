@@ -1,3 +1,4 @@
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Side--Menu.Android-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/1388)
 Side Menu
 ==============
 Side menu with some categories to choose. 
@@ -15,7 +16,7 @@ Sample
 Note
 ====
 
-depends on <a href="https://github.com/ozodrukh">ozodrukh's</a> animation util for CircularReveal animation for 2.3+ version
+depends on <a href="https://github.com/ozodrukh">Ozodrukh's</a> animation util for CircularReveal animation for 2.3+ version
 
 Using
 ======
@@ -74,7 +75,6 @@ And to add all items to menu you have to add all of them into  `LinearLayout`
         </LinearLayout>
     </ScrollView>
 </android.support.v4.widget.DrawerLayout>
-</io.codetail.widget.RevealFrameLayout>
 ```
 
 ```java
