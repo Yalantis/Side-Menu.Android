@@ -1,1 +1,1 @@
-include ':app',	':lib:CircularReveal:circualreveal'
+include ':app',	':lib:CircularReveal:circualreveal',':library'
