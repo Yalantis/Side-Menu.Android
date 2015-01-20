@@ -5,15 +5,17 @@
     android:layout_height="match_parent">
 
     <io.codetail.widget.RevealFrameLayout
-        android:id="@+id/conteiner_frame"
+        android:id="@+id/container_frame"
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <LinearLayout
             android:id="@+id/content_overlay"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"/>
+
         <LinearLayout
             android:id="@+id/content_frame"
             android:layout_width="match_parent"
@@ -32,19 +34,17 @@
     <ScrollView
         android:id="@+id/scrollView"
         android:scrollbarThumbVertical="@android:color/transparent"
-        android:layout_width="80dp"
+        android:layout_width="@dimen/sliding_menu_width"
         android:layout_height="match_parent"
         android:layout_gravity="start|bottom">
 
         <LinearLayout
             android:id="@+id/left_drawer"
             android:orientation="vertical"
-            android:layout_width="80dp"
+            android:layout_width="@dimen/sliding_menu_width"
             android:layout_height="wrap_content"
             android:divider="@android:color/transparent"
-            android:dividerHeight="0dp"
             android:background="@android:color/transparent">
-            <!-- Layout of Drawer -->
         </LinearLayout>
     </ScrollView>
 </android.support.v4.widget.DrawerLayout>
