@@ -1,4 +1,4 @@
-apply plugin: 'com.android.application'
+apply plugin: 'com.android.library'
 
 android {
     compileSdkVersion 21
@@ -17,10 +17,6 @@ android {
         }
     }
 }
-
 dependencies {
-    compile project(':lib:CircularReveal:circualreveal')
-    compile project(':library')
-    compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:21.0.3'
 }
