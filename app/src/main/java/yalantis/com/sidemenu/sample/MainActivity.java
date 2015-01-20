@@ -1,4 +1,4 @@
-package yalantis.com.sidemenu;
+package yalantis.com.sidemenu.sample;
 
 import android.content.res.Configuration;
 import android.graphics.Color;
@@ -19,10 +19,10 @@ import java.util.List;
 
 import io.codetail.animation.SupportAnimator;
 import io.codetail.animation.ViewAnimationUtils;
-import yalantis.com.sidemenu.fragment.ContentFragment;
 import yalantis.com.sidemenu.interfaces.Resourceble;
 import yalantis.com.sidemenu.interfaces.ScreenShotable;
 import yalantis.com.sidemenu.model.SlideMenuItem;
+import yalantis.com.sidemenu.sample.fragment.ContentFragment;
 import yalantis.com.sidemenu.util.ViewAnimator;
 
 

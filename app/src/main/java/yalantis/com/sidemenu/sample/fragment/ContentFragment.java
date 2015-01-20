@@ -1,4 +1,4 @@
-package yalantis.com.sidemenu.fragment;
+package yalantis.com.sidemenu.sample.fragment;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
@@ -10,8 +10,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import yalantis.com.sidemenu.R;
 import yalantis.com.sidemenu.interfaces.ScreenShotable;
+import yalantis.com.sidemenu.sample.R;
 
 /**
  * Created by Konstantin on 22.12.2014.
