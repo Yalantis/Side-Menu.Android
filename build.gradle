@@ -11,6 +11,9 @@ buildscript {
         // in the individual module build.gradle files
     }
 }
+def isReleaseBuild() {
+    return version.contains("SNAPSHOT") == false
+}
 
 allprojects {
     version = VERSION_NAME
@@ -19,4 +22,4 @@ allprojects {
         jcenter()
     }
 }
-apply from: 'maven_push.gradle'
+apply plugin: 'android-reporting'
