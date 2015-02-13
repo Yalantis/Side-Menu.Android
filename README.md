@@ -20,8 +20,31 @@ depends on <a href="https://github.com/ozodrukh">Ozodrukh's</a> animation util f
 
 Using
 ======
-First of all you have to upload animation submodule with `git submodule update --init` command 
-You have to create special overlay layout to show in behind current `Circular Reveal` animated view.
+First of all you have to upload animation submodule with `git submodule update --init` command <br>
+<br>
+Or you can add gradle dependency with command:<br>
+```groovy
+	dependencies {
+	    compile 'com.yalantis:sidemenu:1.0'`
+	}
+``` 
+.<br>
+and command:<br>
+```groovy
+	repositories {
+	    maven {
+	        url "https://jitpack.io"
+	    }
+	}
+	dependencies {
+	    compile 'com.github.ozodrukh:CircularReveal:(latest-release)@aar'
+	}
+
+```
+<br> for CircularReveal module
+
+
+After you have to create special overlay layout to show in behind current `Circular Reveal` animated view.
 And to add all items to menu you have to add all of them into  `LinearLayout`
 
 ```xml
