@@ -40,12 +40,10 @@ public class MainActivity extends ActionBarActivity implements ViewAnimator.View
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        if (savedInstanceState == null) {
-            contentFragment = ContentFragment.newInstance(R.drawable.content_music);
-            getSupportFragmentManager().beginTransaction()
-                    .add(R.id.content_frame, contentFragment)
-                    .commit();
-        }
+        contentFragment = ContentFragment.newInstance(R.drawable.content_music);
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.content_frame, contentFragment)
+                .commit();
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawerLayout.setScrimColor(Color.TRANSPARENT);
         linearLayout = (LinearLayout) findViewById(R.id.left_drawer);
