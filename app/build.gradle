@@ -1,5 +1,9 @@
 apply plugin: 'com.android.application'
-
+repositories {
+    maven {
+        url "https://jitpack.io"
+    }
+}
 android {
     compileSdkVersion 21
     buildToolsVersion "21.1.2"
@@ -19,8 +23,8 @@ android {
 }
 
 dependencies {
-    compile project(':lib:CircularReveal:circualreveal')
     compile project(':library')
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile 'com.android.support:appcompat-v7:21.0.3'
+    compile 'com.github.ozodrukh:CircularReveal:1.0.4'
 }
