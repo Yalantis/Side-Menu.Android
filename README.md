@@ -1,7 +1,7 @@
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Side--Menu.Android-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/1388)
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Side--Menu.Android-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/1388) [![Yalantis](https://github.com/Yalantis/Side-Menu.Android/blob/master/badge.png)](http://yalantis.com/?utm_source=github)
 Side Menu
 ==============
-#### Side menu with some categories to choose.  Made in [![Yalantis](https://github.com/Yalantis/Side-Menu.Android/blob/master/badge.png)](http://yalantis.com/?utm_source=github)
+#### Side menu with some categories to choose.
 Check this <a href="https://dribbble.com/shots/1689922-Side-Menu-Animation?list=searches&tag=yalantis&offset=0">project on dribbble</a>.<br>
 Check this <a href="https://www.behance.net/gallery/20411445/Mobile-Animations-Interactions ">project on Behance</a>.
 
