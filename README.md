@@ -1,4 +1,4 @@
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Side--Menu.Android-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/1388) [![Yalantis](https://github.com/Yalantis/Side-Menu.Android/blob/master/badge.png)](http://yalantis.com/?utm_source=github)
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Side--Menu.Android-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/1388) [![Yalantis](https://github.com/Yalantis/Side-Menu.Android/blob/master/badge.png)](https://yalantis.com/?utm_source=github)
 Side Menu
 ==============
 #### Side menu with some categories to choose.
