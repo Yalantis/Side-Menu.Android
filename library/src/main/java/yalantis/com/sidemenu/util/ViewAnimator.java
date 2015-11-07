@@ -26,7 +26,7 @@ public class ViewAnimator<T extends Resourceble> {
     private ActionBarActivity actionBarActivity;
     private List<T> list;
 
-    private List<View> viewList = new ArrayList<>();
+    private List<View> viewList = new ArrayList<View>();
     private ScreenShotable screenShotable;
     private DrawerLayout drawerLayout;
     private ViewAnimatorListener animatorListener;
