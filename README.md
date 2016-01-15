@@ -126,6 +126,22 @@ And to add all items to menu you have to add all of them into  `LinearLayout`
 All menu items should implement  `Resourceble`  interface to get menu item name and drawable res 
 And all fragments should implement  `ScreenShotable` to get screenshot of a fragment
 
+You can customize icons that u place in the menu,or add mor items. Simply by changing the list you parse to view animator .For example:
+
+```java
+
+	 private List<SlideMenuItem> list = new ArrayList<>(); \\ the list of menu items
+	 
+	SlideMenuItem menuItem0 = new SlideMenuItem(ContentFragment.CLOSE, R.drawable.icn_close);
+        list.add(menuItem0);
+        SlideMenuItem menuItem = new SlideMenuItem(ContentFragment.BUILDING, R.drawable.icn_1);  \\first parameter is the id of menu item,the second is the icon resouce
+        list.add(menuItem);
+        SlideMenuItem menuItem2 = new SlideMenuItem(ContentFragment.BOOK, R.drawable.icn_2);
+        list.add(menuItem2);
+        
+        viewAnimator = new ViewAnimator<>(this, list, contentFragment, drawerLayout, this);
+```		
+
 #### Let us know!
 
 We’d be really happy if you sent us links to your projects where you use our component. Just send an email to github@yalantis.com And do let us know if you have any questions or suggestion regarding the animation. 
