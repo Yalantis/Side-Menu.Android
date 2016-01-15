@@ -41,7 +41,7 @@ and command:<br>
 
 ```
 
-To add graddle dependency you need to open  build.gradle (in your app folder,not in a project folder) then copy and add the dependencies there in the dependencies block;
+To add gradle dependency you need to open  build.gradle (in your app folder,not in a project folder) then copy and add the dependencies there in the dependencies block;
 
 
 <br> for CircularReveal module	
