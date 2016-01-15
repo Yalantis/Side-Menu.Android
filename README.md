@@ -21,7 +21,7 @@ Using
 ======
 First of all you have to upload animation submodule with `git submodule update --init` command <br>
 <br>
-Or you can add gradle dependency with command:<br>
+Or you can add gradle dependency with command :<br>
 ```groovy
 	dependencies {
 	    compile 'com.yalantis:sidemenu:1.0'`
@@ -40,7 +40,11 @@ and command:<br>
 	}
 
 ```
-<br> for CircularReveal module
+
+To add graddle dependency you need to open  build.gradle (in your app folder,not in a project folder) then copy and add the dependencies there in the dependencies block;
+
+
+<br> for CircularReveal module	
 
 
 After you have to create special overlay layout to show in behind current `Circular Reveal` animated view.
