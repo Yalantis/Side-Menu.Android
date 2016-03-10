@@ -2,7 +2,6 @@ package yalantis.com.sidemenu.util;
 
 import android.os.Handler;
 import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.Animation;
@@ -23,7 +22,7 @@ public class ViewAnimator<T extends Resourceble> {
     private final int ANIMATION_DURATION = 175;
     public static final int CIRCULAR_REVEAL_ANIMATION_DURATION = 500;
 
-    private ActionBarActivity actionBarActivity;
+    private Activity activity;
     private List<T> list;
 
     private List<View> viewList = new ArrayList<>();
@@ -31,24 +30,21 @@ public class ViewAnimator<T extends Resourceble> {
     private DrawerLayout drawerLayout;
     private ViewAnimatorListener animatorListener;
 
-    public ViewAnimator(ActionBarActivity activity,
-                        List<T> items,
-                        ScreenShotable screenShotable,
-                        final DrawerLayout drawerLayout,
-                        ViewAnimatorListener animatorListener) {
-        this.actionBarActivity = activity;
+    public ViewAnimator(Activity activity, List<T> items,ScreenShotable screenShotable, final DrawerLayout drawerLayout, ViewAnimatorListener animatorListener){
+        this.activity = activity;
         this.list = items;
         this.screenShotable = screenShotable;
         this.drawerLayout = drawerLayout;
         this.animatorListener = animatorListener;
     }
 
+
     public void showMenuContent() {
         setViewsClickable(false);
         viewList.clear();
         double size = list.size();
         for (int i = 0; i < size; i++) {
-            View viewMenu = actionBarActivity.getLayoutInflater().inflate(R.layout.menu_list_item, null);
+            View viewMenu = activity.getLayoutInflater().inflate(R.layout.menu_list_item, null);
             final int finalI = i;
             viewMenu.setOnClickListener(new View.OnClickListener() {
                 @Override
