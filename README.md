@@ -24,7 +24,7 @@ First of all you have to upload animation submodule with `git submodule update -
 Or you can add gradle dependency with command :<br>
 ```groovy
 	dependencies {
-	    compile 'com.yalantis:sidemenu:1.0'`
+	    compile 'com.yalantis:sidemenu:1.0'
 	}
 ``` 
 .<br>
