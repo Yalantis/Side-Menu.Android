@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.Animation;
 import android.widget.ImageView;
+import android.app.Activity;
 
 import java.util.ArrayList;
 import java.util.List;
