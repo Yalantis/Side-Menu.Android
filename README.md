@@ -15,7 +15,7 @@ Sample
 Note
 ====
 
-depends on <a href="https://github.com/ozodrukh">Ozodrukh's</a> animation util for CircularReveal animation for 2.3+ version
+depends on <a href="https://github.com/ozodrukh">Ozodrukh's</a> animation util for CircularReveal animation for 2.3+ version.
 
 Using
 ======
@@ -27,7 +27,7 @@ Or you can add gradle dependency with command :<br>
 	    compile 'com.yalantis:sidemenu:1.0'
 	}
 ``` 
-.<br>
+<br>
 and command:<br>
 ```groovy
 	repositories {
@@ -47,8 +47,8 @@ To add gradle dependency you need to open  build.gradle (in your app folder,not 
 <br> for CircularReveal module	
 
 
-After you have to create special overlay layout to show in behind current `Circular Reveal` animated view.
-And to add all items to menu you have to add all of them into  `LinearLayout`
+After that you have to create a special overlay layout to show in behind the current `Circular Reveal` animated view.
+And to add all the items to the menu you have to add all of them into a  `LinearLayout`.
 
 ```xml
 <android.support.v4.widget.DrawerLayout
@@ -123,8 +123,8 @@ And to add all items to menu you have to add all of them into  `LinearLayout`
             }
 
 ```
-All menu items should implement  `Resourceble`  interface to get menu item name and drawable res 
-And all fragments should implement  `ScreenShotable` to get screenshot of a fragment
+All menu items should implement the `Resourceble`  interface to get the menu item name and drawable res.
+And all the fragments should implement  `ScreenShotable` to get screenshot of a fragment.
 
 You can customize icons that u place in the menu,or add mor items. Simply by changing the list you parse to view animator .For example:
 
