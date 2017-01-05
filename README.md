@@ -1,8 +1,7 @@
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Side--Menu.Android-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/1388)
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Side--Menu.Android-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/1388) [![Yalantis](https://github.com/Yalantis/Side-Menu.Android/blob/master/badge.png)](https://yalantis.com/?utm_source=github)
 Side Menu
 ==============
-Side menu with some categories to choose. 
-Made in <a href="http://yalantis.com/"> Yalantis</a>.<br>
+#### Side menu with some categories to choose.
 Check this <a href="https://dribbble.com/shots/1689922-Side-Menu-Animation?list=searches&tag=yalantis&offset=0">project on dribbble</a>.<br>
 Check this <a href="https://www.behance.net/gallery/20411445/Mobile-Animations-Interactions ">project on Behance</a>.
 
@@ -22,14 +21,14 @@ Using
 ======
 First of all you have to upload animation submodule with `git submodule update --init` command <br>
 <br>
-Or you can add gradle dependency with <br>
+Or you can add gradle dependency with command :<br>
 ```groovy
 	dependencies {
-	    compile 'com.yalantis:sidemenu:1.0'`
+	    compile 'com.yalantis:sidemenu:1.0'
 	}
 ``` 
-command.<br>
-and <br>
+.<br>
+and command:<br>
 ```groovy
 	repositories {
 	    maven {
@@ -41,7 +40,11 @@ and <br>
 	}
 
 ```
-<br> for CircularReveal module
+
+To add gradle dependency you need to open  build.gradle (in your app folder,not in a project folder) then copy and add the dependencies there in the dependencies block;
+
+
+<br> for CircularReveal module	
 
 
 After you have to create special overlay layout to show in behind current `Circular Reveal` animated view.
@@ -122,6 +125,28 @@ And to add all items to menu you have to add all of them into  `LinearLayout`
 ```
 All menu items should implement  `Resourceble`  interface to get menu item name and drawable res 
 And all fragments should implement  `ScreenShotable` to get screenshot of a fragment
+
+You can customize icons that u place in the menu,or add mor items. Simply by changing the list you parse to view animator .For example:
+
+```java
+
+	 private List<SlideMenuItem> list = new ArrayList<>(); \\ the list of menu items
+	 
+	SlideMenuItem menuItem0 = new SlideMenuItem(ContentFragment.CLOSE, R.drawable.icn_close);
+        list.add(menuItem0);
+        SlideMenuItem menuItem = new SlideMenuItem(ContentFragment.BUILDING, R.drawable.icn_1);  \\first parameter is the id of menu item,the second is the icon resouce
+        list.add(menuItem);
+        SlideMenuItem menuItem2 = new SlideMenuItem(ContentFragment.BOOK, R.drawable.icn_2);
+        list.add(menuItem2);
+        
+        viewAnimator = new ViewAnimator<>(this, list, contentFragment, drawerLayout, this);
+```		
+
+#### Let us know!
+
+We’d be really happy if you sent us links to your projects where you use our component. Just send an email to github@yalantis.com And do let us know if you have any questions or suggestion regarding the animation. 
+
+P.S. We’re going to publish more awesomeness wrapped in code and a tutorial on how to make UI for Android (iOS) better than better. Stay tuned!
 
 ## License
 
