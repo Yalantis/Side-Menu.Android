@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
 
 android {
     compileSdkVersion 23
@@ -20,4 +21,25 @@ android {
 dependencies {
     compile 'com.android.support:appcompat-v7:23.1.1'
 }
-apply from: '../mavenpush.gradle'
+
+task androidJavadocs(type: Javadoc) {
+    source = android.sourceSets.main.java.sourceFiles
+}
+
+task androidJavadocsJar(type: Jar) {
+    classifier = 'javadoc'
+    //basename = artifact_id
+    from androidJavadocs.destinationDir
+}
+
+task androidSourcesJar(type: Jar) {
+    classifier = 'sources'
+    //basename = artifact_id
+    from android.sourceSets.main.java.sourceFiles
+}
+
+artifacts {
+    //archives packageReleaseJar
+    archives androidSourcesJar
+    archives androidJavadocsJar
+}
