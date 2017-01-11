@@ -150,7 +150,7 @@ P.S. We’re going to publish more awesomeness wrapped in code and a tutorial on
 
 ## License
 
-    Copyright 2015, Yalantis
+    Copyright 2017, Yalantis
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
