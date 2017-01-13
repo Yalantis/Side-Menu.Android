@@ -68,10 +68,13 @@ public class ContentFragment extends Fragment implements ScreenShotable {
         Thread thread = new Thread() {
             @Override
             public void run() {
-                Bitmap bitmap = Bitmap.createBitmap(containerView.getWidth(),
-                        containerView.getHeight(), Bitmap.Config.ARGB_8888);
-                Canvas canvas = new Canvas(bitmap);
-                containerView.draw(canvas);
+                Bitmap bitmap ;
+//                        = Bitmap.createBitmap(containerView.getWidth(),
+//                        containerView.getHeight(), Bitmap.Config.ARGB_8888);
+//                Canvas canvas = new Canvas(bitmap);
+//                containerView.draw(canvas);
+                containerView.setDrawingCacheEnabled(true);
+                bitmap=containerView.getDrawingCache();
                 ContentFragment.this.bitmap = bitmap;
             }
         };
