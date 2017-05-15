@@ -36,7 +36,7 @@ and command:<br>
 	    }
 	}
 	dependencies {
-	    compile 'com.github.ozodrukh:CircularReveal:(latest-release)@aar'
+	    compile 'com.github.Ozodrukh.CircularReveal:circualreveal:2.1.0'
 	}
 
 ```
