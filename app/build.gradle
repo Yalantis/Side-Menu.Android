@@ -23,7 +23,7 @@ android {
 }
 
 dependencies {
-    implementation project(':library')
+    implementation 'com.github.yalantis:Side-Menu.Android:1.0.2'
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:28.0.0'
     implementation 'com.github.ozodrukh:CircularReveal:2.1.0'

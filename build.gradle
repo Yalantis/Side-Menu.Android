@@ -21,6 +21,9 @@ allprojects {
     version = VERSION_NAME
     group = GROUP
     repositories {
+        maven {
+            url "https://jitpack.io"
+        }
         jcenter()
         google()
     }

@@ -176,13 +176,13 @@ public class ViewAnimator<T extends Resourceble> {
 
     public interface ViewAnimatorListener {
 
-        public ScreenShotable onSwitch(Resourceble slideMenuItem, ScreenShotable screenShotable, int position);
+        ScreenShotable onSwitch(Resourceble slideMenuItem, ScreenShotable screenShotable, int position);
 
-        public void disableHomeButton();
+        void disableHomeButton();
 
-        public void enableHomeButton();
+        void enableHomeButton();
 
-        public void addViewToContainer(View view);
+        void addViewToContainer(View view);
 
     }
 }
