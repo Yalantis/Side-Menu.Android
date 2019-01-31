@@ -9,7 +9,7 @@ android {
     buildToolsVersion "28.0.3"
 
     defaultConfig {
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -26,5 +26,5 @@ dependencies {
     implementation project(':library')
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.android.support:appcompat-v7:28.0.0'
-    implementation 'com.github.ozodrukh:CircularReveal:1.0.4'
+    implementation 'com.github.ozodrukh:CircularReveal:2.1.0'
 }
