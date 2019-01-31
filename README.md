@@ -24,7 +24,7 @@ First of all you have to upload animation submodule with `git submodule update -
 Or you can add gradle dependency with command :<br>
 ```groovy
 	dependencies {
-	    compile 'com.github.yalantis:Side-Menu.Android:1.0.2'
+	    implementation 'com.github.yalantis:Side-Menu.Android:1.0.2'
 	}
 ``` 
 .<br>
@@ -36,7 +36,7 @@ and command:<br>
 	    }
 	}
 	dependencies {
-	    compile 'com.github.ozodrukh:CircularReveal:(latest-release)@aar'
+	    implementation 'com.github.ozodrukh:CircularReveal:(latest-release)@aar'
 	}
 
 ```
