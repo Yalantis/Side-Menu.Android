@@ -7,7 +7,7 @@ Check this <a href="https://www.behance.net/gallery/20411445/Mobile-Animations-I
 
 God bless Ukraine!
 
-<img src="https://d13yacurqjgara.cloudfront.net/users/125056/screenshots/1689922/events-menu_1-1-6.gif" />
+![Preview](https://cdn.dribbble.com/users/125056/screenshots/1689922/events-menu_1-1-6.gif)
 
 Sample
 ======
@@ -24,7 +24,7 @@ First of all you have to upload animation submodule with `git submodule update -
 Or you can add gradle dependency with command :<br>
 ```groovy
 	dependencies {
-	    compile 'com.yalantis:sidemenu:1.0'
+	    implementation 'com.github.yalantis:Side-Menu.Android:1.0.2'
 	}
 ``` 
 .<br>
@@ -36,7 +36,7 @@ and command:<br>
 	    }
 	}
 	dependencies {
-	    compile 'com.github.ozodrukh:CircularReveal:(latest-release)@aar'
+	    implementation 'com.github.ozodrukh:CircularReveal:(latest-release)@aar'
 	}
 
 ```
@@ -150,7 +150,7 @@ P.S. We’re going to publish more awesomeness wrapped in code and a tutorial on
 
 ## License
 
-    Copyright 2015, Yalantis
+    Copyright 2019, Yalantis
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
