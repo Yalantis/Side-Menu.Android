@@ -1,12 +1,13 @@
 package yalantis.com.sidemenu.util;
 
 import android.os.Handler;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.animation.AccelerateInterpolator;
 import android.view.animation.Animation;
 import android.widget.ImageView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -176,13 +177,13 @@ public class ViewAnimator<T extends Resourceble> {
 
     public interface ViewAnimatorListener {
 
-        public ScreenShotable onSwitch(Resourceble slideMenuItem, ScreenShotable screenShotable, int position);
+        ScreenShotable onSwitch(Resourceble slideMenuItem, ScreenShotable screenShotable, int position);
 
-        public void disableHomeButton();
+        void disableHomeButton();
 
-        public void enableHomeButton();
+        void enableHomeButton();
 
-        public void addViewToContainer(View view);
+        void addViewToContainer(View view);
 
     }
 }
