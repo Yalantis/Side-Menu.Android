@@ -3,8 +3,8 @@ package yalantis.com.sidemenu.sample.fragment;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -27,8 +27,7 @@ public class ContentFragment extends Fragment implements ScreenShotable {
     public static final String MOVIE = "Movie";
 
     private View containerView;
-    protected ImageView mImageView;
-    protected int res;
+    private int res;
     private Bitmap bitmap;
 
     public static ContentFragment newInstance(int resId) {
@@ -56,7 +55,7 @@ public class ContentFragment extends Fragment implements ScreenShotable {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_main, container, false);
-        mImageView = (ImageView) rootView.findViewById(R.id.image_content);
+        ImageView mImageView = rootView.findViewById(R.id.image_content);
         mImageView.setClickable(true);
         mImageView.setFocusable(true);
         mImageView.setImageResource(res);
