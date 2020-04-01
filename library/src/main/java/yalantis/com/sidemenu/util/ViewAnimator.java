@@ -70,7 +70,7 @@ public class ViewAnimator<T extends Resourceble> {
             animatorListener.addViewToContainer(viewMenu);
             final double position = i;
             final double delay = 3 * ANIMATION_DURATION * (position / size);
-            new Handler().postDelayed(new Runnable() {
+            viewList.get((int)position).postDelayed(new Runnable() {
                 public void run() {
                     if (position < viewList.size()) {
                         animateView((int) position);
@@ -91,13 +91,13 @@ public class ViewAnimator<T extends Resourceble> {
         for (int i = list.size(); i >= 0; i--) {
             final double position = i;
             final double delay = 3 * ANIMATION_DURATION * (position / size);
-            new Handler().postDelayed(new Runnable() {
-                public void run() {
-                    if (position < viewList.size()) {
+            if (position < viewList.size()){
+                viewList.get((int) position).postDelayed(new Runnable() {
+                    public void run() {
                         animateHideView((int) position);
                     }
-                }
-            }, (long) delay);
+                }, (long) delay);
+			}
         }
 
     }
