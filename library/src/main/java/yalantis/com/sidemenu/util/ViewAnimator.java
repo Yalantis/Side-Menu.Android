@@ -20,11 +20,11 @@ import yalantis.com.sidemenu.interfaces.ScreenShotable;
  * Created by Konstantin on 12.01.2015.
  */
 public class ViewAnimator<T extends Resourceble> {
-    private final int ANIMATION_DURATION = 175;
+    private final int ANIMATION_DURATION = 250;
     public static final int CIRCULAR_REVEAL_ANIMATION_DURATION = 500;
 
     private AppCompatActivity appCompatActivity;
-  
+
     private List<T> list;
 
     private List<View> viewList = new ArrayList<>();
@@ -58,13 +58,15 @@ public class ViewAnimator<T extends Resourceble> {
             viewMenu.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    int[] location = {0, 0};
+                    int[] location = {appCompatActivity.getWindow().getDecorView().getWidth(), 0};
                     v.getLocationOnScreen(location);
                     switchItem(list.get(finalI), location[1] + v.getHeight() / 2);
                 }
             });
             ((ImageView) viewMenu.findViewById(R.id.menu_item_image)).setImageResource(list.get(i).getImageRes());
-            viewMenu.setVisibility(View.GONE);
+
+            viewMenu.setVisibility(View.INVISIBLE);
+
             viewMenu.setEnabled(false);
             viewList.add(viewMenu);
             animatorListener.addViewToContainer(viewMenu);
@@ -112,8 +114,7 @@ public class ViewAnimator<T extends Resourceble> {
     private void animateView(int position) {
         final View view = viewList.get(position);
         view.setVisibility(View.VISIBLE);
-        FlipAnimation rotation =
-                new FlipAnimation(90, 0, 0.0f, view.getHeight() / 2.0f);
+        FlipAnimation rotation = new FlipAnimation(-90, 0, view.getWidth(), view.getHeight() / 2.0f);
         rotation.setDuration(ANIMATION_DURATION);
         rotation.setFillAfter(true);
         rotation.setInterpolator(new AccelerateInterpolator());
@@ -139,8 +140,7 @@ public class ViewAnimator<T extends Resourceble> {
 
     private void animateHideView(final int position) {
         final View view = viewList.get(position);
-        FlipAnimation rotation =
-                new FlipAnimation(0, 90, 0.0f, view.getHeight() / 2.0f);
+        FlipAnimation rotation = new FlipAnimation(0, -90, view.getWidth(), view.getHeight() / 2.0f);
         rotation.setDuration(ANIMATION_DURATION);
         rotation.setFillAfter(true);
         rotation.setInterpolator(new AccelerateInterpolator());
